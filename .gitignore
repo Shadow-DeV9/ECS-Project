@@ -1,0 +1,71 @@
+# ===================
+# Terraform
+# ===================
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+!example.tfvars  # allow example files if you have them
+
+# ===================
+# AWS
+# ===================
+.aws/
+*.pem
+*.key
+
+# ===================
+# Docker
+# ===================
+*.tar
+*.gz
+
+# ===================
+# Node.js (if applicable)
+# ===================
+node_modules/
+npm-debug.log*
+
+# ===================
+# Python (if applicable)
+# ===================
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# ===================
+# Go (if applicable)
+# ===================
+*.exe
+*.out
+
+# ===================
+# OS files
+# ===================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# ===================
+# Secrets / env files
+# ===================
+.env
+.env.*
+*.secret
+secrets.json
