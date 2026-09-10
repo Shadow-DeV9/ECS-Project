@@ -6,8 +6,6 @@ resource "aws_vpc" "main" {
   }
 }
 
-# Subnets
-
 resource "aws_subnet" "sub1" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.public_subnet_1_cidr
@@ -17,6 +15,7 @@ resource "aws_subnet" "sub1" {
     Name = "pub-sub-1"
   }
 }
+
 resource "aws_subnet" "sub2" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = var.public_subnet_2_cidr
@@ -26,9 +25,6 @@ resource "aws_subnet" "sub2" {
     Name = "pub-sub-2"
   }
 }
-
-
-# Internet gateway
 
 resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
@@ -60,4 +56,3 @@ resource "aws_route_table_association" "ex2" {
   subnet_id      = aws_subnet.sub2.id
   route_table_id = aws_route_table.public.id
 }
-
