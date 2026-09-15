@@ -224,6 +224,9 @@ Checkout → Configure AWS (OIDC) → Setup Terraform → terraform init → ter
 ### ECR Private Repositories
 ![ECR Repos](screenshots/ecr-repos.png)
 
+### GitHub Actions — Both pipelines passing
+![GitHub Actions](screenshots/github-actions.png)
+
 ---
 
 ## How to Deploy From Scratch
